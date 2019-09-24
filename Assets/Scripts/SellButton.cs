@@ -11,12 +11,8 @@ public class SellButton : MonoBehaviour
 
     public void Seller()
     { 
-
-        
-        
-            
         GlobalImperium.money = GlobalImperium.money + GlobalImperium.stone;
-
+        
 
         GlobalImperium.money = GlobalImperium.money + (GlobalImperium.copper * 5);
 
@@ -31,6 +27,8 @@ public class SellButton : MonoBehaviour
 
 
         GlobalImperium.money = GlobalImperium.money + (GlobalImperium.gold * 100);
+
+        
 
         GlobalImperium.stone = 0;
         GlobalImperium.copper = 0;

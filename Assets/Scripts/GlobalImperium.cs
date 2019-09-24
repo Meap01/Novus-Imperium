@@ -20,6 +20,8 @@ public class GlobalImperium : MonoBehaviour
     public static long ruby;
     public static long diamond;
 
+    public static string updatebox;
+
     public GameObject stoneDisplay;
     public GameObject copperDisplay;
     public GameObject tinDisplay;
@@ -27,6 +29,7 @@ public class GlobalImperium : MonoBehaviour
     public GameObject silverDisplay;
     public GameObject goldDisplay;
 
+    public GameObject statusBox;
     public GameObject moneyDisplay;
 
     public long internalstone;
@@ -41,6 +44,8 @@ public class GlobalImperium : MonoBehaviour
     public long internalemerald;
     public long internalruby;
     public long internaldiamond;
+
+
 
     public double internalmoney;
 
@@ -61,7 +66,10 @@ public class GlobalImperium : MonoBehaviour
         internalruby = ruby;
         internaldiamond = diamond;
 
+
+
         internalmoney = money;
+        
 
         stoneDisplay.GetComponent<Text>().text = "Stone: " + internalstone;
         copperDisplay.GetComponent<Text>().text = "Copper: " + internalcopper;
@@ -69,6 +77,8 @@ public class GlobalImperium : MonoBehaviour
         ironDisplay.GetComponent<Text>().text = "Iron: ;" + internaliron;
         silverDisplay.GetComponent<Text>().text = "Silver: " + internalsilver;
         goldDisplay.GetComponent<Text>().text = "Gold: " + internalgold;
+
+        statusBox.GetComponent<Text>().text = updatebox;
 
         moneyDisplay.GetComponent<Text>().text = "Money: " + internalmoney;
 
