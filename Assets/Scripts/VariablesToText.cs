@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class VariablesToText : MonoBehaviour
 {
-    public static double money;
+    public static double money; //  Money variable for whole project
 
     public static long stone;
     public static long copper;
@@ -13,18 +13,18 @@ public class VariablesToText : MonoBehaviour
     public static long iron;
     public static long silver;
     public static long gold;
-    public static long quartz;
+    public static long quartz;              // global element variables for whole project
     public static long marble;
     public static long sapphire;
     public static long emerald;
     public static long ruby;
     public static long diamond;
-
-    public static string updatebox;
+        
+    public static string updatebox;                 // global element for the update bar, for whole project
 
     public GameObject stoneDisplay;
     public GameObject copperDisplay;
-    public GameObject tinDisplay;
+    public GameObject tinDisplay;        //game objects to display the ammount of each
     public GameObject ironDisplay;
     public GameObject silverDisplay;
     public GameObject goldDisplay;
@@ -38,7 +38,7 @@ public class VariablesToText : MonoBehaviour
     public long internaliron;
     public long internalsilver;
     public long internalgold;
-    public long internalquartz;
+    public long internalquartz;             // internal values of each
     public long internalmarble;
     public long internalsapphire;
     public long internalemerald;
@@ -58,7 +58,7 @@ public class VariablesToText : MonoBehaviour
         internaltin = tin;
         internaliron = iron;
         internalsilver = silver;
-        internalgold = gold;
+        internalgold = gold;                    //internal values get the global values
         internalquartz = quartz;
         internalmarble = marble;
         internalsapphire = sapphire;
@@ -73,7 +73,7 @@ public class VariablesToText : MonoBehaviour
 
         stoneDisplay.GetComponent<Text>().text = "Stone: " + internalstone;
         copperDisplay.GetComponent<Text>().text = "Copper: " + internalcopper;
-        tinDisplay.GetComponent<Text>().text = "Tin: " + internaltin;
+        tinDisplay.GetComponent<Text>().text = "Tin: " + internaltin;                           // shows the values to the user
         ironDisplay.GetComponent<Text>().text = "Iron: " + internaliron;
         silverDisplay.GetComponent<Text>().text = "Silver: " + internalsilver;
         goldDisplay.GetComponent<Text>().text = "Gold: " + internalgold;

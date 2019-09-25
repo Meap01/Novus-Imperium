@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class clickSceneChange : MonoBehaviour
 {
+    // when a button is clicked, swtiches scene
     public void GotoMainScene()
     {
         SceneManager.LoadScene("MainGameScene");

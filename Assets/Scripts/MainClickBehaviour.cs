@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class MainClickBehaviour : MonoBehaviour
 {
+    public static int minrandom = 1;
+    public static int maxrandom = 10;
+
 
     public void Clicker()
     { 
@@ -15,8 +18,7 @@ public class MainClickBehaviour : MonoBehaviour
         int oreCheck = 0;
         long count = 0;
 
-        int minrandom = 1;
-        int maxrandom = 10;
+
 
         oreCheck = Random.Next(minrandom, 100);
 
@@ -26,7 +28,7 @@ public class MainClickBehaviour : MonoBehaviour
             case 1:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.stone = VariablesToText.stone + count;
-                VariablesToText.updatebox = "Stone +" + VariablesToText.stone ;
+                VariablesToText.updatebox = "Bonus Stone +" + count;
                 break;
             case 5:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
