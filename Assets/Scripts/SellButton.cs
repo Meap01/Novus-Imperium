@@ -22,7 +22,7 @@ public class SellButton : MonoBehaviour
         VariablesToText.money = VariablesToText.money + VariablesToText.stone + (VariablesToText.copper * copperValue) + (VariablesToText.tin * tinValue) + (VariablesToText.iron * ironValue) + (VariablesToText.silver * silverValue) + (VariablesToText.gold * goldValue);
 
         count = VariablesToText.stone + (VariablesToText.copper * 5) +(VariablesToText.tin * 10) +(VariablesToText.iron * 25) +(VariablesToText.silver * 50) +(VariablesToText.gold * 100);
-        VariablesToText.updatebox = "Money recieved from selling all: " + count;
+        VariablesToText.updatebox = "Money recieved from selling all +" + count;
 
         VariablesToText.stone = 0;
         VariablesToText.copper = 0;

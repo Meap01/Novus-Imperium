@@ -20,6 +20,6 @@ public class clickSceneChange : MonoBehaviour
     }
     public void GotoshopScene()
     {
-        SceneManager.LoadScene("shop");
+        SceneManager.LoadScene("ShopScene");
     }
 }   

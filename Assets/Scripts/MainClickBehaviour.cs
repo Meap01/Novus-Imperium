@@ -26,37 +26,37 @@ public class MainClickBehaviour : MonoBehaviour
             case 1:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.stone = VariablesToText.stone + count;
-                VariablesToText.updatebox = " Stone mined: " + VariablesToText.stone ;
+                VariablesToText.updatebox = "Stone +" + VariablesToText.stone ;
                 break;
             case 5:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.copper = VariablesToText.copper + Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.updatebox = " Copper mined: " + count;
+                VariablesToText.updatebox = "Copper +" + count;
                 break;
             case 9:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.tin = VariablesToText.tin + Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.updatebox = " Tin mined: " + count;
+                VariablesToText.updatebox = "Tin +" + count;
                 break;
             case 11:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.iron = VariablesToText.iron + Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.updatebox = " Iron mined: " + count;
+                VariablesToText.updatebox = "Iron +" + count;
                 break;
             case 25:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.silver = VariablesToText.silver + Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.updatebox = " Silver mined: " + count;
+                VariablesToText.updatebox = "Silver +" + count;
                 break;
             case 58:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.gold = VariablesToText.gold + Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.updatebox = " Gold mined: " + count;
+                VariablesToText.updatebox = "Gold +" + count;
                 break;
             default:
                 VariablesToText.stone += minrandom;
                 count = minrandom;
-                VariablesToText.updatebox = " stone mined: " + count;
+                VariablesToText.updatebox = "Stone +" + count;
                 break;
         }
             

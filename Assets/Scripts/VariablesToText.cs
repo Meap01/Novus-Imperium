@@ -74,7 +74,7 @@ public class VariablesToText : MonoBehaviour
         stoneDisplay.GetComponent<Text>().text = "Stone: " + internalstone;
         copperDisplay.GetComponent<Text>().text = "Copper: " + internalcopper;
         tinDisplay.GetComponent<Text>().text = "Tin: " + internaltin;
-        ironDisplay.GetComponent<Text>().text = "Iron: ;" + internaliron;
+        ironDisplay.GetComponent<Text>().text = "Iron: " + internaliron;
         silverDisplay.GetComponent<Text>().text = "Silver: " + internalsilver;
         goldDisplay.GetComponent<Text>().text = "Gold: " + internalgold;
 
