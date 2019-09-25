@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonclickSceneChange : MonoBehaviour
+public class clickSceneChange : MonoBehaviour
 {
     public void GotoMainScene()
     {

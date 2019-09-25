@@ -9,41 +9,27 @@ using UnityEngine.UI;
 public class SellButton : MonoBehaviour
 {
 
+    int copperValue = 5;
+    int tinValue = 10;
+    int ironValue = 25;
+    int silverValue = 50;
+    int goldValue = 100;
+
     public void Seller()
-    { 
-        GlobalImperium.money = GlobalImperium.money + GlobalImperium.stone;
-        
+    {
+        long count = 0;
 
-        GlobalImperium.money = GlobalImperium.money + (GlobalImperium.copper * 5);
+        VariablesToText.money = VariablesToText.money + VariablesToText.stone + (VariablesToText.copper * copperValue) + (VariablesToText.tin * tinValue) + (VariablesToText.iron * ironValue) + (VariablesToText.silver * silverValue) + (VariablesToText.gold * goldValue);
 
+        count = VariablesToText.stone + (VariablesToText.copper * 5) +(VariablesToText.tin * 10) +(VariablesToText.iron * 25) +(VariablesToText.silver * 50) +(VariablesToText.gold * 100);
+        VariablesToText.updatebox = "Money recieved from selling all: " + count;
 
-        GlobalImperium.money = GlobalImperium.money + (GlobalImperium.tin * 10);
-
-
-        GlobalImperium.money = GlobalImperium.money + (GlobalImperium.iron * 25);
-
-
-        GlobalImperium.money = GlobalImperium.money + (GlobalImperium.silver * 50);
-
-
-        GlobalImperium.money = GlobalImperium.money + (GlobalImperium.gold * 100);
-
-        
-
-        GlobalImperium.stone = 0;
-        GlobalImperium.copper = 0;
-        GlobalImperium.tin = 0;
-        GlobalImperium.iron = 0;
-        GlobalImperium.silver = 0;
-        GlobalImperium.gold = 0;
-
-
-
-
-
-
-
-
+        VariablesToText.stone = 0;
+        VariablesToText.copper = 0;
+        VariablesToText.tin = 0;
+        VariablesToText.iron = 0;
+        VariablesToText.silver = 0;
+        VariablesToText.gold = 0;
 
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 
 
-public class MainClickBehaviour : MonoBehaviour
+public class ClickerButton : MonoBehaviour
 {
 
     public void Clicker()
@@ -18,7 +18,7 @@ public class MainClickBehaviour : MonoBehaviour
         int minrandom = 1;
         int maxrandom = 10;
 
-        oreCheck = Random.Next(minrandom, 100);
+        oreCheck = Random.Next(0, 100);
 
         switch (oreCheck)
         {
@@ -38,7 +38,7 @@ public class MainClickBehaviour : MonoBehaviour
                 VariablesToText.tin = VariablesToText.tin + Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.updatebox = " Tin mined: " + count;
                 break;
-            case 11:
+            case 60:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.iron = VariablesToText.iron + Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.updatebox = " Iron mined: " + count;
@@ -48,7 +48,7 @@ public class MainClickBehaviour : MonoBehaviour
                 VariablesToText.silver = VariablesToText.silver + Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.updatebox = " Silver mined: " + count;
                 break;
-            case 58:
+            case 75:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.gold = VariablesToText.gold + Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.updatebox = " Gold mined: " + count;
