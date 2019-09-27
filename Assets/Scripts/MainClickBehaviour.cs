@@ -18,8 +18,6 @@ public class MainClickBehaviour : MonoBehaviour
         int oreCheck = 0;
         long count = 0;
 
-
-
         oreCheck = Random.Next(minrandom, 100);
 
         switch (oreCheck)
