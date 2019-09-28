@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class MainClickBehaviour : MonoBehaviour
 {
-    public static int minrandom = 1;
-    public static int maxrandom = 10;
+    public static int minrandom = 100;
+    public static int maxrandom = 1000;
 
 
     public void Clicker()
