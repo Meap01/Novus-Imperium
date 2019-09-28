@@ -8,24 +8,28 @@ public class ShopAutoMine : MonoBehaviour
 
 
     public bool stoneMiner = false;
-    public static int MinerIncrease = 1;
+    public static int MinerIncrease = 0;
     public int InternalIncrase = MinerIncrease;
     // Update is called once per frame
+    private void Start()
+    {
+
+    }
     void Update()
     {
-        if (stoneMiner == false)
-        {
-            stoneMiner = true;
-            StartCoroutine(oneStoneMiner());
-        }
-        DontDestroyOnLoad(this.gameObject);
+          if (stoneMiner == false)
+          {
+              stoneMiner = true;
+              StartCoroutine(oneStoneMiner());
+          }
     }
     IEnumerator oneStoneMiner()
     {
-        VariablesToText.stone += MinerIncrease;
-        yield return new WaitForSeconds(1);
-        stoneMiner = false;
-        DontDestroyOnLoad(this.gameObject);
+
+         VariablesToText.stone += Shop.totalStoneMiners;
+         yield return new WaitForSeconds(1);
+         stoneMiner = false;
+
     }
     
 }

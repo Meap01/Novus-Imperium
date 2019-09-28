@@ -18,7 +18,7 @@ public class MainClickBehaviour : MonoBehaviour
         int oreCheck = 0;
         long count = 0;
 
-        oreCheck = Random.Next(minrandom, 100);
+        oreCheck = Random.Next(0, 100);
 
         switch (oreCheck)
         {
@@ -26,31 +26,31 @@ public class MainClickBehaviour : MonoBehaviour
             case 1:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
                 VariablesToText.stone = VariablesToText.stone + count;
-                VariablesToText.updatebox = "Bonus Stone +" + count;
+                VariablesToText.updatebox = "Bonus Stone +" + count;            
                 break;
             case 5:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.copper = VariablesToText.copper + Random.Next(minrandom, maxrandom) + minrandom;
+                VariablesToText.copper = VariablesToText.copper + count;
                 VariablesToText.updatebox = "Copper +" + count;
                 break;
             case 9:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.tin = VariablesToText.tin + Random.Next(minrandom, maxrandom) + minrandom;
+                VariablesToText.tin = VariablesToText.tin + count;
                 VariablesToText.updatebox = "Tin +" + count;
                 break;
             case 11:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.iron = VariablesToText.iron + Random.Next(minrandom, maxrandom) + minrandom;
+                VariablesToText.iron = VariablesToText.iron + count;
                 VariablesToText.updatebox = "Iron +" + count;
                 break;
             case 25:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.silver = VariablesToText.silver + Random.Next(minrandom, maxrandom) + minrandom;
+                VariablesToText.silver = VariablesToText.silver + count;
                 VariablesToText.updatebox = "Silver +" + count;
                 break;
             case 58:
                 count = Random.Next(minrandom, maxrandom) + minrandom;
-                VariablesToText.gold = VariablesToText.gold + Random.Next(minrandom, maxrandom) + minrandom;
+                VariablesToText.gold = VariablesToText.gold + count;
                 VariablesToText.updatebox = "Gold +" + count;
                 break;
             default:
