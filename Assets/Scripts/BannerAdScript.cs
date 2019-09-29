@@ -6,7 +6,7 @@ public class BannerAdScript : MonoBehaviour
 {
 
     public string gameId = "3308887";
-    public string placementId = "bannerPlacement";
+    public string placementId = "MainClickTop";
     public bool testMode = true;
 
     void Start()

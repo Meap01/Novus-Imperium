@@ -29,6 +29,14 @@ public class PlayerData
 
     public double TotalEnhancedClick = 0;
 
+    public double StoneMinerCost;
+    public double CopperMinerCost;
+    public double TinMinerCost;
+    public double IronMinerCost;
+    public double SilverMinerCost;
+    public double GoldMinerCost;
+    public double EnhancedClickCost;
+
     public PlayerData (VariablesToText player)
     {
         money = VariablesToText.money;
@@ -54,5 +62,14 @@ public class PlayerData
         totalGoldMiners = Shop.totalGoldMiners;
 
         TotalEnhancedClick = Shop.TotalEnhancedClick;
+
+        StoneMinerCost = Shop.StoneMinerCost;
+        CopperMinerCost = Shop.CopperMinerCost;
+        TinMinerCost = Shop.TinMinerCost;
+        IronMinerCost = Shop.IronMinerCost;
+        SilverMinerCost = Shop.SilverMinerCost;
+        GoldMinerCost = Shop.GoldMinerCost;
+        EnhancedClickCost = Shop.EnhancedClickCost;
+
     }
 }

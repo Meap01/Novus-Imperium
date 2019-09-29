@@ -81,11 +81,19 @@ public class VariablesToText : MonoBehaviour
         Shop.totalGoldMiners = data.totalGoldMiners;
 
         Shop.TotalEnhancedClick = data.TotalEnhancedClick;
+        Shop.StoneMinerCost = data.StoneMinerCost;
+        Shop.CopperMinerCost = data.CopperMinerCost;
+        Shop.TinMinerCost = data.TinMinerCost;
+        Shop.IronMinerCost = data.IronMinerCost;
+        Shop.SilverMinerCost = data.SilverMinerCost;
+        Shop.GoldMinerCost = data.GoldMinerCost;
+        Shop.EnhancedClickCost = data.EnhancedClickCost;
 
 
-    }
 
-
+    }   
+        
+        
 
 
 
