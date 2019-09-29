@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,6 +42,13 @@ public class Shop : MonoBehaviour
     public static int totalSilverMiners = 0;
     public static int totalGoldMiners = 0;
 
+    // my tingz n' dat
+    public GameObject OneEnhancedClickPurchase;
+    public GameObject TotalEnhancedClickDisplay;
+    public GameObject TextEnhancedClickCost;
+    public static double EnhancedClickCost = 100;
+    public static double TotalEnhancedClick = 0;
+
     void Start()
     {
         TotalStoneMinersDisplay.GetComponent<Text>().text = "Total Stone miners = " + totalStoneMiners;
@@ -50,12 +58,38 @@ public class Shop : MonoBehaviour
         TotalSilverMinersDisplay.GetComponent<Text>().text = "Total Silver miners = " + totalSilverMiners;
         TotalGoldMinersDisplay.GetComponent<Text>().text = "Total Gold miners = " + totalGoldMiners;
 
-        TextStoneMinerCost.GetComponent<Text>().text = "Stone Miner:" + StoneMinerCost;
-        TextCopperMinerCost.GetComponent<Text>().text = "Copper Miner:" + CopperMinerCost;
-        TextTinMinerCost.GetComponent<Text>().text = "Tin Miner:" + TinMinerCost;
-        TextIronMinerCost.GetComponent<Text>().text = "Iron Miner:" + IronMinerCost;
-        TextSilverMinerCost.GetComponent<Text>().text = "Silver Miner:" + SilverMinerCost;
-        TextGoldMinerCost.GetComponent<Text>().text = "Gold Miner:" + GoldMinerCost;
+        TextStoneMinerCost.GetComponent<Text>().text = "Stone Miner: " + StoneMinerCost;
+        TextCopperMinerCost.GetComponent<Text>().text = "Copper Miner: " + CopperMinerCost;
+        TextTinMinerCost.GetComponent<Text>().text = "Tin Miner: " + TinMinerCost;
+        TextIronMinerCost.GetComponent<Text>().text = "Iron Miner: " + IronMinerCost;
+        TextSilverMinerCost.GetComponent<Text>().text = "Silver Miner: " + SilverMinerCost;
+        TextGoldMinerCost.GetComponent<Text>().text = "Gold Miner: " + GoldMinerCost;
+
+        // niks shiz in tings bruv
+        TotalEnhancedClickDisplay.GetComponent<Text>().text = "Total Enchanced Clicks = " + TotalEnhancedClick;
+        TextEnhancedClickCost.GetComponent<Text>().text = "Enhanced Click: " + EnhancedClickCost;
+    }
+
+
+    // my tins ya get me fam
+    // tis at top cuz me no want to scroll
+    public void startOneEnhancedClickPurchase()
+    { 
+        if (VariablesToText.money >= EnhancedClickCost)
+        {
+            OneEnhancedClickPurchase.SetActive(true);
+            VariablesToText.money += -EnhancedClickCost;
+            VariablesToText.updatebox = "Enhanced Click bought for " + EnhancedClickCost;
+            EnhancedClickCost += (EnhancedClickCost * 3);
+            EnhancedClickCost = Math.Round(EnhancedClickCost, 2);
+            TotalEnhancedClick = TotalEnhancedClick + 0.1;
+            TotalEnhancedClickDisplay.GetComponent<Text>().text = "Enchanced Click Multiplier= " + TotalEnhancedClick;
+        }
+        else
+        {
+            VariablesToText.updatebox = "You do not have enough money to buy an enhanced click";
+        }
+        TextEnhancedClickCost.GetComponent<Text>().text = "Enhanced Click: " + EnhancedClickCost;
     }
 
     public void startOneStoneMinerPurchase()
@@ -67,6 +101,7 @@ public class Shop : MonoBehaviour
             VariablesToText.money += -StoneMinerCost;
             VariablesToText.updatebox = "Miner bought for " + StoneMinerCost;
             StoneMinerCost += (StoneMinerCost *0.1);
+            StoneMinerCost = Math.Round(StoneMinerCost, 2);
             totalStoneMiners++;
             TotalStoneMinersDisplay.GetComponent<Text>().text = "Total stone miners = " + totalStoneMiners;
 
@@ -88,6 +123,7 @@ public class Shop : MonoBehaviour
             VariablesToText.money += -CopperMinerCost;
             VariablesToText.updatebox = "Copper miner bought for " + CopperMinerCost;
             CopperMinerCost += (CopperMinerCost * 0.1);
+            CopperMinerCost = Math.Round(CopperMinerCost, 2);
             totalCopperMiners++;
             TotalCopperMinersDisplay.GetComponent<Text>().text = "Total Copper miners = " + totalCopperMiners;
 
@@ -108,6 +144,7 @@ public class Shop : MonoBehaviour
             VariablesToText.money += -TinMinerCost;
             VariablesToText.updatebox = "Tine miner bought for " + TinMinerCost;
             TinMinerCost += (TinMinerCost * 0.1);
+            TinMinerCost = Math.Round(TinMinerCost, 2);
             totalTinMiners++;
             TotalTinMinersDisplay.GetComponent<Text>().text = "Total Tin miners = " + totalTinMiners;
 
@@ -129,6 +166,7 @@ public class Shop : MonoBehaviour
             VariablesToText.money += -IronMinerCost;
             VariablesToText.updatebox = "Irone miner bought for " + IronMinerCost;
             IronMinerCost += (IronMinerCost * 0.1);
+            IronMinerCost = Math.Round(IronMinerCost, 2);
             totalIronMiners++;
             TotalIronMinersDisplay.GetComponent<Text>().text = "Total Iron miners = " + totalIronMiners;
     
@@ -150,6 +188,7 @@ public class Shop : MonoBehaviour
             VariablesToText.money += -SilverMinerCost;
             VariablesToText.updatebox = "Silvere miner bought for " + SilverMinerCost;
             SilverMinerCost += (SilverMinerCost * 0.1);
+            SilverMinerCost = Math.Round(SilverMinerCost, 2);
             totalSilverMiners++;
             TotalSilverMinersDisplay.GetComponent<Text>().text = "Total Silver miners = " + totalSilverMiners;
 
@@ -171,6 +210,7 @@ public class Shop : MonoBehaviour
             VariablesToText.money += -GoldMinerCost;
             VariablesToText.updatebox = "Golde miner bought for " + GoldMinerCost;
             GoldMinerCost += (GoldMinerCost * 0.1);
+            GoldMinerCost = Math.Round(GoldMinerCost, 2);
             totalGoldMiners++;
             TotalGoldMinersDisplay.GetComponent<Text>().text = "Total Gold miners = " + totalGoldMiners;
 

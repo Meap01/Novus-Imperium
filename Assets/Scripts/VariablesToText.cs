@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,18 +8,18 @@ public class VariablesToText : MonoBehaviour
 {
     public static double money; //  Money variable for whole project
 
-    public static long stone;
-    public static long copper;
-    public static long tin;
-    public static long iron;
-    public static long silver;
-    public static long gold;
-    public static long quartz;              // global element variables for whole project
-    public static long marble;
-    public static long sapphire;
-    public static long emerald;
-    public static long ruby;
-    public static long diamond;
+    public static double stone;
+    public static double copper;
+    public static double tin;
+    public static double iron;
+    public static double silver;
+    public static double gold;
+    public static double quartz;              // global element variables for whole project
+    public static double marble;
+    public static double sapphire;
+    public static double emerald;
+    public static double ruby;
+    public static double diamond;
         
     public static string updatebox;                 // global element for the update bar, for whole project
 
@@ -32,22 +33,61 @@ public class VariablesToText : MonoBehaviour
     public GameObject statusBox;
     public GameObject moneyDisplay;
 
-    public long internalstone;
-    public long internalcopper;
-    public long internaltin;
-    public long internaliron;
-    public long internalsilver;
-    public long internalgold;
-    public long internalquartz;             // internal values of each
-    public long internalmarble;
-    public long internalsapphire;
-    public long internalemerald;
-    public long internalruby;
-    public long internaldiamond;
+    public double internalstone;
+    public double internalcopper;
+    public double internaltin;
+    public double internaliron;
+    public double internalsilver;
+    public double internalgold;
+    public double internalquartz;             // internal values of each
+    public double internalmarble;
+    public double internalsapphire;
+    public double internalemerald;
+    public double internalruby;
+    public double internaldiamond;
 
 
 
     public double internalmoney;
+
+    public void SaveGame()
+    {
+        SaveSystem.SaveGame(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        money = data.money;
+
+        stone = data.stone;
+        copper = data.copper;
+        tin = data.tin;
+        iron = data.iron;
+        silver = data.silver;
+        gold = data.gold;
+        quartz = data.quartz;
+        marble = data.marble;
+        sapphire = data.sapphire;
+        emerald = data.emerald;
+        ruby = data.ruby;
+        diamond = data.diamond;
+
+        Shop.totalStoneMiners = data.totalStoneMiners;
+        Shop.totalCopperMiners = data.totalCopperMiners;
+        Shop.totalTinMiners = data.totalTinMiners;
+        Shop.totalIronMiners = data.totalIronMiners;
+        Shop.totalSilverMiners = data.totalSilverMiners;
+        Shop.totalGoldMiners = data.totalGoldMiners;
+
+        Shop.TotalEnhancedClick = data.TotalEnhancedClick;
+
+
+    }
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -68,8 +108,14 @@ public class VariablesToText : MonoBehaviour
 
 
 
-        internalmoney = money;
-        
+        internalmoney = Math.Round(money, 2);
+        internalstone = Math.Ceiling(stone);
+        internalcopper = Math.Ceiling(copper);
+        internaltin = Math.Ceiling(tin);
+        internaliron = Math.Ceiling(iron);
+        internalsilver = Math.Ceiling(silver);
+        internalgold = Math.Ceiling(gold);
+
 
         stoneDisplay.GetComponent<Text>().text = "Stone: " + internalstone;
         copperDisplay.GetComponent<Text>().text = "Copper: " + internalcopper;

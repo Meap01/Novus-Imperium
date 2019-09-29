@@ -12,7 +12,7 @@ public class SellSelected : MonoBehaviour
     public bool IronButton = true;
     public bool CopperButton = true;
     public bool GoldButton = true;
-    public long count = 0; // used to count the total money you get from a sale // Copying Danielius pog
+    public double count = 0; // used to count the total money you get from a sale // Copying Danielius pog
 
     // Update is called once per frame
 

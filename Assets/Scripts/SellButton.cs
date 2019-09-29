@@ -8,16 +8,16 @@ using UnityEngine.UI;
 
 public class SellButton : MonoBehaviour
 {
-    public static int stoneValue = 1;
-    public static int copperValue = 5;
-    public static int tinValue = 10;
-    public static int ironValue = 25;         // sale value of a single element
-    public static int silverValue = 50;
-    public static int goldValue = 100;
+    public static double stoneValue = 1;
+    public static double copperValue = 5;
+    public static double tinValue = 10;
+    public static double ironValue = 25;         // sale value of a single element
+    public static double silverValue = 50;
+    public static double goldValue = 100;
 
     public void Seller()
     {
-        long count = 0; // used to count the total money you get from a sale
+        double count = 0; // used to count the total money you get from a sale
 
         VariablesToText.money = VariablesToText.money + (VariablesToText.stone * stoneValue) + (VariablesToText.copper * copperValue) + (VariablesToText.tin * tinValue) + (VariablesToText.iron * ironValue) + (VariablesToText.silver * silverValue) + (VariablesToText.gold * goldValue);
 
