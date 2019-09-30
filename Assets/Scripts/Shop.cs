@@ -46,7 +46,7 @@ public class Shop : MonoBehaviour
     public GameObject OneEnhancedClickPurchase;
     public GameObject TotalEnhancedClickDisplay;
     public GameObject TextEnhancedClickCost;
-    public static double EnhancedClickCost = 100;
+    public static double EnhancedClickCost = 1000000;
     public static double TotalEnhancedClick = 0;
 
     void Start()

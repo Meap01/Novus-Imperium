@@ -6,11 +6,8 @@ using UnityEngine.Advertisements;
 public class RewardedVideoAd : MonoBehaviour, IUnityAdsListener
 {
 
-#if UNITY_IOS
-    private string gameId = "1486551";
-#elif UNITY_ANDROID
     private string gameId = "3308887";
-#endif
+
 
     Button myButton;
     public string myPlacementId = "rewardedVideo";
@@ -26,7 +23,7 @@ public class RewardedVideoAd : MonoBehaviour, IUnityAdsListener
         if (myButton) myButton.onClick.AddListener(ShowRewardedVideo);
 
         // Initialize the Ads listener and service:
-        Advertisement.AddListener(this);
+        Advertisement.AddListener(this); 
         Advertisement.Initialize(gameId, true);
     }
 
